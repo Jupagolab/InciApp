@@ -30,25 +30,23 @@ const Form = () => {
           <option value="En Progreso">En Progreso</option>
           <option value="Resuelto">Resuelto</option>
         </select>
-        <div className="flex justify-start items-center gap-3">
-          <label className="mx-2 font-semibold" htmlFor="prioridad">
-            Prioridad
-          </label>
-          <select
-            className="py-1 px-2"
-            name="prioridad"
-            id="prioridad"
-            value={"Media"}
-          >
-            <option value="Baja">Baja</option>
-            <option value="Media">Media</option>
-            <option value="Alta">Alta</option>
-          </select>
-        </div>
+        <label className="font-semibold" htmlFor="prioridad">
+          Prioridad
+        </label>
+        <select
+          className="py-1 px-2"
+          name="prioridad"
+          id="prioridad"
+          value={"Media"}
+        >
+          <option value="Baja">Baja</option>
+          <option value="Media">Media</option>
+          <option value="Alta">Alta</option>
+        </select>
         <label className="font-semibold" htmlFor="fecha">
           Fecha de Creación
         </label>
-        <input type="date" name="fecha" id="fecha" className="py-1 px-2" />
+        <input type="date" name="fecha" id="fecha" className="py-1 px-2" value={Date.now()} />
       </form>
     </div>
   );
