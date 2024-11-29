@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Login = () => {
-  const handleSubmit = () => {
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
   }
 
   return (

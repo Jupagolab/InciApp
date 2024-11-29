@@ -31,3 +31,18 @@ export const crearIncidencia = async (req, res) => {
     return res.status(500).json({ message: "Error al crear el evento" });
   }
 };
+
+export const buscarIncidencia = async (req, res) => {
+  try {
+    const incidencias = await Inicidencias.find().populate('usuarioAsignado');
+
+    if (!incidencias) return res.status(404).json({ mensaje: "No se han encontrado incidencias"});
+
+    res.status(201).json({
+      incidencias
+    })
+
+  } catch (error) {
+    
+  }
+}
